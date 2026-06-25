@@ -15,7 +15,7 @@ spec:
   rules:
     - http:
         paths:
-          # - path: /${APP_NAME}-${NAMESPACE}(/|$)(.*)
+          - path: /${APP_NME}-${NAMESPACE}(/|$)(.*)
             pathType: ImplementationSpecific
             backend:
               service:
