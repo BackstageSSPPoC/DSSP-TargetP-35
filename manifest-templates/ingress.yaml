@@ -8,14 +8,14 @@ metadata:
     environment: ${NAMESPACE}
   annotations:
     kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
-    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    # nginx.ingress.kubernetes.io/rewrite-target: /$2
+    # nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   ingressClassName: nginx
   rules:
     - http:
         paths:
-          - path: /${APP_NME}-${NAMESPACE}(/|$)(.*)
+          - path: /${APP_NAME}-${NAMESPACE}(/|$)(.*)
             pathType: ImplementationSpecific
             backend:
               service:
